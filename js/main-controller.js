@@ -91,6 +91,13 @@ function renderProjectsModal() {
 }
 
 function sendMail() {
-  var fullName = $('input[name="fname"]').val();
-  console.log(fullName);
+  var subject = $('input[name="subject"]').val();
+  var mail = $('input[name="email"]').val();
+  var message = $('textarea').val();
+  if (!subject || !mail || !message) return
+  window.open(`mailto:${mail}?subject=${subject}&body=${message}`);
+  $('textarea"]').val('');
+  $('input[name="email"]').val('');
+  $('input[name="subject"]').val('');
+
 }

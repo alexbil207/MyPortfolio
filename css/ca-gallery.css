@@ -62,6 +62,10 @@ body {
     -webkit-tap-highlight-color: #fed136;
 }
 
+label {
+    width: 20vw;
+}
+
 .offcanvas-btn {
     z-index: 100000;
     position: fixed;
@@ -107,6 +111,11 @@ body {
 
 .offcanvas-aside .offcanvas-content-suffix {
     height: 20%;
+}
+
+.email-btn:active {
+    position: relative;
+    top: 2px;
 }
 
 @media (min-width: 575px) {
