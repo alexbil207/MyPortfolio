@@ -90,9 +90,8 @@ function sendMail() {
   var mail = $('input[name="email"]').val();
   var message = $('textarea').val();
   if (!subject || !mail || !message) return
-  window.open(`mailto:${mail}?subject=${subject}&body=${message}`);
-  $('textarea"]').val('');
+  $('textarea').val('');
   $('input[name="email"]').val('');
   $('input[name="subject"]').val('');
-
+  window.open(`mailto:'alexbil207@gmail.com'?subject=${subject}, ${mail}&body=${message}`);
 }
