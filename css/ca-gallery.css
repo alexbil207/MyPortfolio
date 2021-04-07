@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-    padding: 50px 0;
+    padding: 50px 10px;
 }
 
 section h2.section-heading {
@@ -346,7 +346,7 @@ header.masthead .intro-text .intro-heading {
 
 .portfolio-modal .modal-content {
     min-height: 100%;
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
     border: none;
     border-radius: 0;
