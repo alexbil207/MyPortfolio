@@ -6,33 +6,34 @@ $(document).ready(onInit);
 
 
 function onInit() {
-    renderSkilles();
-    renderProjects();
-    renderProjectsModal();
+  renderSkilles();
+  renderProjects();
+  renderProjectsModal();
+  $('.email-btn').click(sendMail);
 }
 
 
 function renderSkilles() {
-    var skilles = getSkilles();
-    var strSkilles = skilles.map(skill => {
-        return `<p class="skilltitle">${skill.name}
+  var skilles = getSkilles();
+  var strSkilles = skilles.map(skill => {
+    return `<p class="skilltitle">${skill.name}
             <div class="progress">
             <div class="progress-bar ${skill.color}" role="progressbar" style="width: ${skill.pracent};" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${skill.pracent}</div>
             </div>
         </p>
         `
-    }).join('');
-    $('.skill').html(strSkilles);
+  }).join('');
+  $('.skill').html(strSkilles);
 
 }
 
 
 function renderProjects() {
-    var count = 0;
-    var projects = getProjects();
-    var minProjStr = projects.map(project => {
-        count++;
-        return `<div class="col-md-3 col-sm-6 portfolio-item">
+  var count = 0;
+  var projects = getProjects();
+  var minProjStr = projects.map(project => {
+    count++;
+    return `<div class="col-md-3 col-sm-6 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal${count}">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -46,16 +47,16 @@ function renderProjects() {
                         <p class="text-muted">${project.category}</p>
                     </div>
                 </div>`
-    }).join('');
-    $('.container .projects').html(minProjStr);
+  }).join('');
+  $('.container .projects').html(minProjStr);
 }
 
 function renderProjectsModal() {
-    var count = 0;
-    var projects = getProjects();
-    var maxProjStr = projects.map(project => {
-        count++;
-        return `
+  var count = 0;
+  var projects = getProjects();
+  var maxProjStr = projects.map(project => {
+    count++;
+    return `
           <div class="portfolio-modal modal fade" id="portfolioModal${count}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -85,7 +86,11 @@ function renderProjectsModal() {
     </div>
   </div>
         `
-    }).join('');
-    $('.modals').html(maxProjStr);
+  }).join('');
+  $('.modals').html(maxProjStr);
 }
 
+function sendMail() {
+  var fullName = $('input[name="fname"]').val();
+  console.log(fullName);
+}

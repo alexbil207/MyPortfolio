@@ -40,12 +40,6 @@ section h3.section-subheading {
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* @media (min-width: 768px) {
-    section {
-        padding: 150px 0;
-    }
-} */
-
 ::-moz-selection {
     background: #fed136;
     text-shadow: none;
@@ -117,11 +111,11 @@ body {
 
 @media (min-width: 575px) {
     .offcanvas-btn-open {
-        margin-right: 30vw;
+        margin-right: 50vw;
     }
     .offcanvas-aside {
-        width: 30vw;
-        right: -30vw;
+        width: 50vw;
+        right: -50vw;
     }
 }
 
